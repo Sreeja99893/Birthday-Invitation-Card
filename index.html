@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Birth Day..</title>
     <meta charset="UTF-8">
+    <title>Birth Day..</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="icon.png">
     <style>
-    
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
         }
+
         body {
-            margin: 0;
-            padding: 0;
             background-image: url("birthday.jpg");
             background-repeat: no-repeat;
             background-size: cover;
@@ -22,6 +20,16 @@
             font-family: 'Times New Roman', Times, serif;
             color: white;
             text-align: center;
+            position: relative;
+        }
+
+        /* Dark overlay for better text readability */
+        body::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
         }
 
         .content {
@@ -29,31 +37,70 @@
             border-radius: 10px;
             max-width: 1000px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .content {
+                padding: 15px;
+                max-width: 95%;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            h2, h3 {
+                font-size: 1.3em;
+            }
+
+            p, li, a {
+                font-size: 1em;
+            }
+
+            ul {
+                padding-left: 20px;
+                text-align: left;
+            }
         }
     </style>
-    
 </head>
 <body>
     <div class="content">
-        <h1>SREEJA BUSSA</h1>
         <h1>It's My Birthday!</h1>
-        <h1>30th March</h1>
-        <h1>Who I am</h1>
+        <h2>30th March</h2>
+        <h3>Who I Am</h3>
         <p>Hi there! I'm a good girl with a kind heart and a strong mind. 💖</p>
         <p>I believe in hard work, honesty, and always giving my best — no matter what.</p>
         <p>Today, I celebrate not just my birthday, but everything I've overcome, learned, and achieved. 🌟</p>
         <p>Thank you for being part of my journey!</p>
-        <h1>DINNER MENU</h1>
+
+        <h3>DINNER MENU</h3>
         <ul>
-            <li>Chiken Biriyani</li>
-            <li>cake</li>
-            <li>chocolets</li>
-            <li>mutton curry</li>
+            <li>Chicken Biryani</li>
+            <li>Cake</li>
+            <li>Chocolates</li>
+            <li>Mutton Curry</li>
         </ul>
-        <h1>MAP...</h1>
-        <a href="https://www.googlemaps.com">Here is The Route of My home..!</a>
+
+        <h3>MAP</h3>
+        <a href="https://www.google.com/maps">Here is the Route to My Home..!</a>
+
         <p>Thanks for being a part of my special day 🎉</p>
+
+        <a href="contact.html">CONTACT DETAILS</a>
     </div>
-    <a href="contact.html">CONTACT DETAILS</a>
 </body>
 </html>
